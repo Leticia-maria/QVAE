@@ -38,13 +38,12 @@ def optimize_parameters(x_train, params, n, num_layers, size_reduce):
 
 def main():
     # Define parameters and initialize data
-    n = 6  # number of qubits
+    n = 6 
     num_layers = 1
     size_reduce = 2
     params = np.random.rand(10 * num_layers)  # Random initial parameters
 
-    # Dummy data (x_train should be loaded or defined here)
-    x_train = np.random.rand(100, 64)  # Example: 100 training samples with 64 features
+    x_train = np.random.rand(100, 64)
 
     # Optimize quantum circuit parameters
     optimized_params = optimize_parameters(x_train, params, n, num_layers, size_reduce)

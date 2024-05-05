@@ -41,7 +41,6 @@ def create_variational_circuit(n, num_layers, params):
         for i in range(n):
             circuit.ry(parameters[layer * 10 + i], i)
         circuit.barrier()
-        # Add specific quantum gates here based on the application
         circuit.barrier()
     circuit.assign_parameters({p: val for p, val in zip(parameters, params)})
     return circuit
